@@ -1,9 +1,3 @@
-module "eits_vars" {
- source = ""
-
- module_repo = "eits-tf-aws-cloudwatch-logs"
- tags = var.tags
-}
 
 locals {
  prefix = var.name_prefix != null ? var.name_prefix : module.eits_vars.prefix
