@@ -21,7 +21,7 @@ resource "aws_cloudwatch_log_stream" "this" {
 }
 
 module "iam_role" {
- source = ""
+ source = "git@github.com:sanath998/terraform-aws-iam.git"
  count = var.create_iam_role ? 1 : 0
 
  role_name = "_${local.name}"
